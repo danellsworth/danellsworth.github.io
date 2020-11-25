@@ -16374,14 +16374,14 @@ $( document ).ready(function(){
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Dan Ellsworth and Alden Pratt</p>
-<blockquote><p>For our Final Tutorial Project, we will be examining the effectiveness of using sentiment analysis based on Twitter posts relating to publicly traded companies as a leading or lagging indicator of the stock price. Fluctuations in stock prices can be largely attributed to changes in the attitude of its buyers and holders. As such, platforms in which people are allowed to freely voice their attitude toward a company, such as Twitter, can be influential for a broad audience of traders. If a particular authority voices optimism regarding the future of a company’s stock, and enough people are convinced into buying, its stock price will increase to meet the increased demand. Conversely, authority figures voicing pessimism generally results in a lower price. We will be using company sentiment data from Twitter to see if there is a significant correlation between community sentiment and the change in the stock price. Through studying this issue, several questions arise. We are curious to know if sentiment generally follows stock prices or if stock prices follow sentiment. In other words, should we be looking at sentiment as a leading or lagging indicator of stock prices? Who is influential? Are some companies intrinsically more or less resistant to changes in sentiment? Can our findings be used in developing a complete and profitable trading strategy?</p>
+<blockquote><p>For our Final Tutorial Project, we will be examining the effectiveness of using sentiment analysis as an indicator of stock price movement. Fluctuations in stock prices can often be attributed to changes in the attitude of its buyers and sellers. Platforms, such as Twitter, where people freely voice their attitude toward companies, can influence traders' decisions. If a particular authority voices optimism regarding the future of a company’s stock, and enough people are convinced to buy, its stock price will increase to meet demand. Conversely, authority figures voicing pessimism generally results in a price decrease. We will be using company sentiment data from Twitter to see if there is a significant correlation between community sentiment and the change in the stock price. In our investigation of this issue, we will explore the following questions: Does sentiment generally follow stock prices, or do stock prices follow sentiment? In other words, should we be looking at sentiment as a leading or lagging indicator? Who is influential on Twitter? Are some companies intrinsically more or less resistant to changes in sentiment? Can our findings be used in developing a complete and profitable trading strategy?</p>
 </blockquote>
-<p>Below are a couple of data sets containing sentiment analysis for various companies:</p>
+<p>Below are a couple of datasets containing sentiment analysis for various companies:</p>
 <blockquote><p><a href="https://www.kaggle.com/vivekrathi055/sentiment-analysis-on-financial-tweets">https://www.kaggle.com/vivekrathi055/sentiment-analysis-on-financial-tweets</a> 
 <a href="https://www.kaggle.com/yash612/stockmarket-sentiment-dataset">https://www.kaggle.com/yash612/stockmarket-sentiment-dataset</a></p>
 </blockquote>
 <p><br></p>
-<p>We will use these datasets in section 3: Broad Market Sentiment Analysis. To determine the effects that Twitter posts have on stock prices, we plan on combining one of these data sets with historical stock price data that can be pulled from Yahoo Finance. Yahoo Finance provides data for stock price fluctuations for every company and every day. We expect that the changes in public sentiment over time will somewhat mirror the changes in the stock price as provided by Yahoo Finance.</p>
+<p>We will use these datasets in section 3: Broad Market Sentiment Analysis. To determine the effects that Twitter posts have on stock prices, we plan on combining one of these datasets with historical stock price data that can be pulled from Yahoo Finance. Yahoo Finance provides data for stock price fluctuations for every company and every day. We expect that the changes in public sentiment over time will somewhat mirror the changes in the stock price as provided by Yahoo Finance.</p>
 
 </div>
 </div>
@@ -16839,12 +16839,12 @@ C:\Users\Danel\anaconda3\lib\site-packages\sklearn\utils\deprecation.py:144: Fut
 <h4 id="Preprocessing-the-Training-and-Testing-Data">Preprocessing the Training and Testing Data<a class="anchor-link" href="#Preprocessing-the-Training-and-Testing-Data">&#182;</a></h4><blockquote><p>To increase the effectivness of our NLP learning algorthim, it is important to clean the tweets before using them for analysis. The preprocessing step eliminates the following:</p>
 <ul>
 <li>stopwords (i.e. 'the', 'a', 'and', 'how', etc.)</li>
-<li>any tweet with a question mark - questions are not good indicators of sentiment </li>
-<li>any non-letter (including: numbers, emojis, and punctuation) </li>
+<li>tweets with a question marks - questions are not good indicators of sentiment </li>
+<li>non-letters (including: numbers, emojis, and punctuation) </li>
 <li>URL links</li>
 <li>accounts refrenced using '@' symbol</li>
-<li>any words less than 3 characters</li>
-<li>any retweets - we decided not to count the same tweet twice</li>
+<li>words less than 3 characters</li>
+<li>retweets - we decided not to count the same tweet twice</li>
 </ul>
 </blockquote>
 
@@ -17557,7 +17557,7 @@ weighted avg       0.72      0.72      0.72      1256
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Apple's-Stock-Price-Over-the-Same-Period">Apple's Stock Price Over the Same Period<a class="anchor-link" href="#Apple's-Stock-Price-Over-the-Same-Period">&#182;</a></h4><blockquote><p>To see how Apple's stock has reacted over the same period, we calculate daily returns and cumulative returns. We use the 5-day rolling avg of each to eliminate some of the market noise. Since both of these graphs are represented by percentages, we can conveniently relate Apple's price performance to the sentiment graph represented above.</p>
+<h4 id="Apple's-Stock-Price-Over-the-Same-Period">Apple's Stock Price Over the Same Period<a class="anchor-link" href="#Apple's-Stock-Price-Over-the-Same-Period">&#182;</a></h4><blockquote><p>To see how Apple's stock has reacted over the same period, we calculate daily returns and cumulative returns. We use the 5-day rolling average of each to eliminate some of the market noise. Since both of these graphs are represented by percentages, we can conveniently relate Apple's price performance to the sentiment graph represented above.</p>
 </blockquote>
 
 </div>
@@ -19063,7 +19063,7 @@ Name: sentiment, dtype: int64
 <li>The algorithm used to calculate sentiment is not accurate (biased in thinking tweets are positive)</li>
 <li>People generally tweet more about positive things than negative things</li>
 </ol>
-<p>This warrants further investigation for the final deliverable.</p>
+<p>We believe the sentiment scores are likely biased. Unfortunately, we do not know what methods the Kaggle user used to calculate sentiment for these tweets. By hand-checking a subset of their data, we found roughly 50% of instances to be correctly labeled. It is important to note that because this is a ternary classification model, 50% is still quite a bit better than random guessing.</p>
 </blockquote>
 <p>We know from the previous section that the distribution of tweets by sector is not evenly distributed (i.e. there are more than 600 tweets about healthcare and consumer cyclical companies and less than 100 tweets regarding communication services). Thus, it is probably better to look at the mean sentiment analysis by each sector:</p>
 
@@ -19610,10 +19610,10 @@ Name: text, dtype: int64
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="-Final-Thoughts-"><center> Final Thoughts </center><a class="anchor-link" href="#-Final-Thoughts-">&#182;</a></h2><blockquote><p>There are a lot of factors when it comes to pricing equities and nearly an infinite amount of reasons someone might decide to tweet something. Due to this, there is a significant amount of noise in both the stock market and sentiment analysis data - making it extremely difficult to determine if there is any correlation between the two.</p>
+<h2 id="Final-Thoughts">Final Thoughts<a class="anchor-link" href="#Final-Thoughts">&#182;</a></h2><blockquote><p>There are a lot of factors when it comes to pricing equities and nearly an infinite number of reasons someone might decide to tweet something. Due to this, there is a significant amount of noise in both the stock market and sentiment analysis data - making it extremely difficult to determine if there is any correlation between the two.</p>
 <p>We worry about the accuracy of the sentiment analysis data in section 3 (broad markets) because we are not sure how this data was classified. It seems that this Kaggle user may have trained their model using general tweets and tried to apply this model to financial tweets. Sentiment analysis is a tricky thing to do with a high degree of accuracy, and we have learned (the hard way) that there is a lot to consider and there are no hard and fast rules to this process. Social media has additional challenges because the text is not written in a consistent style (i.e. slang, sarcasm, misspellings, abbreviations, etc.). We have seen that it is critical to restrict the domain when possible to increase the accuracy of NLP learning models.</p>
-<p>Training on all financial tweets is likely too broad to make any meaningful conclusions. Training on one company (aapl in our case) does not let us compare results with other competitors. The most interesting subset, by far, is the airlines because the customer experience is one of the few things that distinguishes various airlines. With our very limited data, we have seen that Southwest, Delta, and United have better sentiment than American Airlines. We hypothesize that these trends in sentiment may correlate with stock price movement over long periods.</p>
-<p>This Project has left us with more questions than answers; however, we believe we have laid the groundwork to piece together the answers in the future. Obviously, to draw any significant conclusions regarding the correlation between stocks and sentiment we need heaps of sentiment data. We can continue to scrape this data using Twitters API, now that we understand some of the intricacies of scraping and training classification models.</p>
+<p>Training on all financial tweets is likely too broad to make any meaningful conclusions. Training on one company (aapl in our case) does not let us compare results with other competitors. The most interesting subset, by far, is the airline data because the customer experience is one of the few things that distinguishes various airlines. With our very limited data, we have seen that Southwest, Delta, and United have better sentiment than American Airlines. We hypothesize that these trends in sentiment may correlate with stock price movement over long periods.</p>
+<p>This Project has left us with more questions than answers; however, we believe we have laid the groundwork to piece together the answers in the future. Obviously, to draw any significant conclusions regarding the correlation between stocks and sentiment we need heaps of sentiment data. Now that we understand some of the intricacies of scraping and training classification models, we can continue to scrape data - continuing our pursuit to find more concrete answers.</p>
 </blockquote>
 
 </div>
@@ -19623,24 +19623,11 @@ Name: text, dtype: int64
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Where-to-Next?">Where to Next?<a class="anchor-link" href="#Where-to-Next?">&#182;</a></h3><blockquote><p>At the onset of this project, we only intended to use financial tweets. Due to limitations in the data, we expanded our research to include consumers' tweets. One of our questions was whether we should be looking at sentiment as a leading or lagging indicator of stock prices.</p>
-<p>We hypothesize this may depend on whether we analyze consumer or verified financial accounts. We believe financial Twitter accounts may indicate previous market movements, but consumer data may be more indicative of future price movements. We imagine a scenario where consumers fall in love or fall out of love with a product or service before markets can price this shift in consumer demand accordingly. We think this question warrants further investigation.</p>
+<p>We hypothesize this may depend on whether we analyze consumer or verified financial accounts. We believe financial Twitter accounts may indicate previous market movements, but consumer data may be more indicative of future price movements. We imagine a scenario where consumers fall in love or out of love with a product or service before markets can price this shift in consumer demand accordingly. We think this question warrants further investigation.</p>
 </blockquote>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
